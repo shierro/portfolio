@@ -1,5 +1,7 @@
+$intro: #001449;
+
 section#intro {
-  background-color: #001449;
+  background-color: $intro;
   // background-color: #AA00FF;
 }
 
@@ -18,7 +20,7 @@ section#intro {
   Pluto : ~90 580 days (~248 years)
 */
 
-$year-in-second : 10; // 1 Earth year = 30 sec
+$year-in-second : 30; // 1 Earth year = 30 sec
 
 @function revolution($pl-year-in-days){
   @return $pl-year-in-days * $year-in-second / 365.2563 + s  //Earth reference
@@ -52,19 +54,6 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
   padding:0;
   margin:0;
   box-sizing:border-box;
-}
-
-html, body{
-  height:100%;
-  width:100%;
-}
-
-body{
-  font:normal 1em/1.45em "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  color:#fff;
-  background: radial-gradient(ellipse at bottom, #1C2837 0%, #050608 100%);
-  background-attachment:fixed;
 }
 
 h1{
@@ -116,7 +105,8 @@ code{
     border-radius:100px;
   }
   div{
-    border-radius:1000px;
+    // width: 100vw;
+    border-radius:50%;
     top:50%;
     left:50%;
     position:absolute;

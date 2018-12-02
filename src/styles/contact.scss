@@ -9,6 +9,9 @@ section#contact {
   background-image: linear-gradient(0deg, #022244, #58c8da);
   margin: 0;
 
+  @media (max-width: 480px) {
+    height: 200vh !important;
+  }
   .section__title {
     // flex-direction: column-reverse;
     position: absolute;

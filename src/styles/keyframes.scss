@@ -135,7 +135,9 @@
 
 @keyframes fish {
   0% { left: calc(100% + 30px); top: 60%;}
-  50% {top: 40%}
+  50% {
+    top: 40%;
+  }
   100% {left: -20%; top: 50%;}
 }
 
