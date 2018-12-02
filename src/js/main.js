@@ -25,13 +25,13 @@ $(document).ready(function() {
     $.scrollify({
       section : '.section',
       interstitialSection: '.section',
-      // easing: 'easeOutExpo',
-      scrollSpeed: 1100,
-      // offset : 60,
-      // standardScrollElements: '',
+      easing: 'easeOutExpo',
+      scrollSpeed: 1000,
+      offset : 0,
+      standardScrollElements: '',
       scrollbars: true,
       overflowScroll: true,
-      setHeights: false,
+      setHeights: true,
       updateHash: true,
       touchScroll:true,
     });

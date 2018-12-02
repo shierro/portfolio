@@ -22,9 +22,10 @@ html {
   }
 }
 .section {
-  background-color: #FFFFFF;
-  text-align: center;
+  // background-color: #FFFFFF;
   // border: 1px solid red;
+  text-align: center;
+  margin: 0 auto;
   height: 100vh !important;
   display: flex;
   flex: 1;
