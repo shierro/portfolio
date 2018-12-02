@@ -1,0 +1,20 @@
+sudo: false
+language: node_js
+node_js:
+  - "node"
+install: npm install
+script:
+  - npm run build
+cache:
+  directories:
+    - node_modules
+deploy:
+  local_dir: ./dist
+  provider: pages
+  skip_cleanup: true
+  fqdn: portfolio.theocraft.tech
+  github_token: "$GITHUB_TOKEN"
+  on:
+    branch: master
+after_deploy:
+  - bash ./clearCloudflareCache.sh

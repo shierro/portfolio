@@ -1,0 +1,36 @@
+// Variables
+$primary: #BFCFF7;
+$secondary: #1BB0CE;
+$font: Montserrat, 'Helvetica', 'Open Sans';
+
+html * {
+  font-family: $font;
+}
+
+html {
+  overflow: auto;
+}
+
+.main-content {
+  background-color: $primary;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.section {
+  background-color: #FFFFFF;
+  text-align: center;
+  border: 1px solid red;
+  height: 100vh !important;
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.progress-bar {
+  background-color: rebeccapurple;
+  height: 5px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
