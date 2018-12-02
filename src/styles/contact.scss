@@ -1,9 +1,255 @@
 
 section#contact {
   background-color: #FFF3DB;
+  // background-color: #FFFFFF !important;
   justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(0deg, #022244, #58c8da);
+  margin: 0;
 
   .section__title {
-    flex-direction: column;
+    // flex-direction: column-reverse;
+    position: absolute;
   }
+  .ocean {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  
+  
+  .ocean::after, 
+  .ocean::before {
+    background-color: white;
+    position: absolute;
+    content: '';
+    top: -80px;
+    left: -10%;
+    border-radius: 100%;
+    animation: waves 10s ease infinite;
+    opacity: 0.2;
+  }
+  
+  .ocean::before {
+    top: -60px;
+    animation-delay: 5s;
+    opacity: 0.1;
+    left: -5%;
+  }
+  
+  .bubbles {
+    width: 100%;
+    height: 100vh;
+    animation: bubbles 10s linear infinite;
+  }
+  
+  .bubbles span {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: absolute;
+    background-color: white;
+    bottom: -10%;
+    animation: bubble 10s ease-in-out infinite;
+  }
+  
+  .bubbles span:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+    left: 10%;
+    animation-delay: 3s;
+    animation-duration: 10s;
+    opacity: 0.2;
+  }
+  
+  .bubbles span:nth-child(2) {
+    width: 30px;
+    height: 30px;
+    opacity: 0.5;
+    left: 40%;
+    animation-delay: 1s;
+    animation-duration: 5s;
+    opacity: 0.1;
+  }
+  
+  .bubbles span:nth-child(3) {
+    width: 10px;
+    height: 10px;
+    opacity: 0.5;
+    left: 30%;
+    animation-delay: 5s;
+    animation-duration: 20s;
+    opacity: 0.3;
+  }
+  
+  .bubbles span:nth-child(4) {
+    width: 35px;
+    height: 35px;
+    opacity: 0.5;
+    left: 40%;
+    animation-delay: 8s;
+    animation-duration: 8s;
+    opacity: 0.2;
+  }
+  
+  .bubbles span:nth-child(5) {
+    width: 45px;
+    height: 45px;
+    opacity: 0.5;
+    left: 60%;
+    animation-delay: 10s;
+    animation-duration: 15s;
+    opacity: 0.1;
+  }
+  
+  .bubbles span:nth-child(6) {
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    left: 80%;
+    animation-delay: 3s;
+    animation-duration: 30s;
+    opacity: 0.4;
+  }
+  
+  .bubbles span:nth-child(7) {
+    width: 15px;
+    height: 15px;
+    opacity: 0.5;
+    left: 90%;
+    animation-duration: 25s;
+    opacity: 0.3;
+  }
+  
+  .bubbles span:nth-child(8) {
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    left: 50%;
+    animation-duration: 10s;
+    opacity: 0.2;
+  }
+  
+  .fish {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background-color: orange;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: inset 0px -6px 0px rgba(0, 0, 0, 0.1);
+    animation: fish 40s ease-in infinite;
+  }
+  
+  /* fish tail */
+  .fish::after, .fish::before {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: inherit;
+    content: '';
+    position: absolute;
+    top: 30%;
+    right: -20px;
+    transform: rotate(-20deg);
+    z-index: -1;
+    animation: tail 2s ease infinite;
+  }
+  
+  .fish::before {
+    top: 42%;
+    transform: rotate(20deg);
+  }
+  
+  /* rest of the fish */
+  
+  .fish span {
+    content: '';
+    position: absolute;
+  }
+  
+  /* eyes - white part */
+  .fish span:nth-child(1), 
+  .fish span:nth-child(2) {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.1);
+    top: 20px;
+    z-index: -2;
+  }
+  
+  .fish span:nth-child(2) {
+    z-index: 0;
+    left: 35px;
+    top: 25px;
+  }
+  
+  /* eyes - black part */
+  .fish span:nth-child(1)::after, 
+  .fish span:nth-child(2)::after {
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    background-color: #2a2a2a;
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 6px;
+    left: 6px;
+    box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.5);
+    animation: eyes 4s ease infinite;
+  }
+  
+  /* mouth */
+  .fish span:nth-child(3) {
+    border-radius: 100%;
+    width: 25px;
+    height: 15px;
+    background-color: brown;
+    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.3);
+    top: 50px;
+    left: -5px;
+    z-index: 1;
+    transform: rotate(5deg);
+    border: solid 5px orange;
+    animation: mouth 4s ease infinite;
+  }
+  
+  /* fish bubbles */
+  .fish span:nth-child(4), 
+  .fish span:nth-child(5),
+  .fish span:nth-child(6) {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    box-shadow: inset 0px 5px 0px rgba(0, 0, 0, 0.3);
+    top: 20px;
+    left: -30px;
+    z-index: -2;
+    opacity: 0.3;
+    animation: fishbubbles 4s ease infinite;
+    z-index: 2;
+  }
+  
+  .fish span:nth-child(5) {
+    animation-delay: 0.5s;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .fish span:nth-child(6) {
+    animation-delay: 1s;
+    width: 10px;
+    height: 10px;
+  }
+  
 }

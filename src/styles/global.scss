@@ -3,14 +3,15 @@ html * {
 }
 
 html {
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .progress-bar {
-  background-color: $rebeccapurple;
+  background-color: $secondary;
   height: 5px;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
 }
 
@@ -73,6 +74,7 @@ html {
     &__container {
       flex: 1;
       flex-flow: column-reverse;
+      z-index: 9998;
     }
   }
 }

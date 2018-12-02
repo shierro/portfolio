@@ -1,11 +1,12 @@
 .startup-overlay {
   position: fixed;
-  background-color: #FFFFFF;
+  background-color: #AA00FF;
   height: 100vh;
   width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
+  z-index: 99999;
 }
 
 .typing {
