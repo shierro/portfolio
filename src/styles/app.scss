@@ -49,18 +49,29 @@ html {
   align-items: center;
 }
 
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+}
 .typing {
   color: $secondary;
   top: 65%;
-  left: 35%;
+  margin: 0 auto;
+  width: 89px;
   position: fixed;
   display: block;
   overflow: hidden;
   white-space: nowrap;
   font-weight: 900;
-  width: 110px;
   border-right: 1px solid transparent;
-  animation: typing 0.5s steps(1), caret 1s steps(1) infinite;
+  animation: typing 2s steps(10), caret 1s steps(1) infinite;
+  &-container {
+    display: block;
+    text-align: center;
+  }
 }
 
 .flex-row {

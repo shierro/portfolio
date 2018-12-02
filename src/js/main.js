@@ -40,5 +40,5 @@ $(document).ready(function() {
     new ScrollProgress((x, y) => {
       progressElement.style.width = y * 100 + '%';
     });
-  }, 3000);
+  }, 2000);
 });
