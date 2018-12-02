@@ -78,3 +78,12 @@
 @keyframes caret{
   50% { border-right-color: currentColor}
 }
+
+@keyframes move-up-down {
+  0%, 100% {
+    bottom: 55px;
+  }
+  50% {
+    bottom: 35px;
+  }
+}

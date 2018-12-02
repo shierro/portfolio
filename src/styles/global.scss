@@ -34,4 +34,53 @@ html {
   flex: 1;
   align-items: center;
   justify-content: center;
+
+  &__title {
+    flex: 1;
+    flex-direction: column-reverse;
+  }
+}
+
+.scroll {
+  text-align: center;
+  position: relative;
+  font-size: 1.3em;
+  margin-top: 20px;
+  display: inline-block;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+
+  &:after {
+    border-right: 2px solid #FFF;
+    border-bottom: 2px solid #FFF;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  &:after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    animation: move-up-down 3s linear infinite;
+  }
+
+  &-next {
+    &__container {
+      flex: 1;
+      flex-flow: column-reverse;
+    }
+  }
+}
+
+a:link, a:visited {
+  color: #FFF;
+  text-decoration: none;
 }

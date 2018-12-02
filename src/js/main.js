@@ -35,10 +35,13 @@ $(document).ready(function() {
       updateHash: true,
       touchScroll:true,
     });
+    $('.scroll-next').click(function() {
+      $.scrollify.next();
+    });
     var progressElement = document.querySelector('.progress-bar');
   
     new ScrollProgress((x, y) => {
       progressElement.style.width = y * 100 + '%';
     });
-  }, 2000);
+  }, 200);
 });
