@@ -18,3 +18,9 @@ deploy:
     branch: master
 after_deploy:
   - bash ./clearCloudflareCache.sh
+notifications:
+  email:
+    recipients:
+    - theodoro.pelingan@gmail.com
+    on_success: always
+    on_failure: always
