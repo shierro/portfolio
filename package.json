@@ -57,7 +57,7 @@
     "build": "gulp build",
     "dev": "gulp build && gulp watch"
   },
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A professional front-end template for building fast, robust, and adaptable web apps or sites.",
   "repository": {
     "type": "git",

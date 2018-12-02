@@ -201,8 +201,8 @@ gulp.task('lint:js', () =>
 );
 
 gulp.task('sass', function () {
-  gulp.src(`${dirs.src}/styles/*.scss`)
-    .pipe(sass().on('error', sass.logError))
+  gulp.src(`${dirs.src}/styles/app.scss`)
+    .pipe(sass({ includePaths : [`${dirs.src}/styles/`] }).on('error', sass.logError))
     .pipe(gulp.dest(`${dirs.dist}/css`))
     .pipe(livereload());
 });

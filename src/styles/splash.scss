@@ -1,0 +1,63 @@
+.startup-overlay {
+  position: fixed;
+  background-color: #FFFFFF;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.typing {
+  color: $secondary;
+  top: 65%;
+  margin: 0 auto;
+  width: 89px;
+  position: fixed;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 900;
+  border-right: 1px solid transparent;
+  animation: typing 2s steps(10), caret 1s steps(1) infinite;
+  &-container {
+    display: block;
+    text-align: center;
+  }
+}
+
+.fulfilling-bouncing-circle-spinner, .fulfilling-bouncing-circle-spinner * {
+  box-sizing: border-box;
+}
+
+.fulfilling-bouncing-circle-spinner {
+  height: 60px;
+  width: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  animation: fulfilling-bouncing-circle-spinner-animation infinite 4000ms ease;
+}
+
+.fulfilling-bouncing-circle-spinner .orbit {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border: calc(60px * 0.03) solid $secondary;
+  animation: fulfilling-bouncing-circle-spinner-orbit-animation infinite 4000ms ease;
+}
+
+.fulfilling-bouncing-circle-spinner .circle {
+  height: 60px;
+  width: 60px;
+  color: $secondary;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  border: calc(60px * 0.1) solid $secondary;
+  animation: fulfilling-bouncing-circle-spinner-circle-animation infinite 4000ms ease;
+  transform: rotate(0deg) scale(1);
+}
