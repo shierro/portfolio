@@ -40,7 +40,7 @@ $(document).ready(function() {
     });
     var progressElement = document.querySelector('.progress-bar');
   
-    new ScrollProgress((x, y) => {
+    new ScrollProgress(function(x, y) {
       progressElement.style.width = y * 100 + '%';
     });
   }, 2000);
