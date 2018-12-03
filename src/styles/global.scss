@@ -2,7 +2,7 @@ html * {
   font-family: $font;
 }
 
-html {
+html, body {
   overflow-y: auto;
   overflow-x: hidden;
 }
