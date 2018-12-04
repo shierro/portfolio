@@ -7,6 +7,21 @@ html, body {
   overflow-x: hidden;
 }
 
+section {
+  a, a:visited{
+    text-decoration:none;
+    color:white;
+    opacity:.7;
+    &:hover{
+      opacity:1
+    }
+    &.icon{
+      margin-right:2px;
+      padding:3px;
+    }
+  }
+}
+
 .progress-bar {
   background-color:#FFFF00;
   height: 5px;

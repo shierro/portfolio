@@ -55,19 +55,6 @@ section#intro {
     letter-spacing:.1em;
   }
 
-  a, a:visited{
-    text-decoration:none;
-    color:white;
-    opacity:.7;
-    &:hover{
-      opacity:1
-    }
-    &.icon{
-      margin-right:2px;
-      padding:3px;
-    }
-  }
-
   hr{
     margin:26px 0;
     border:0;
