@@ -57,8 +57,15 @@
     "build": "gulp build",
     "dev": "gulp build && gulp watch"
   },
-  "version": "0.3.7",
-  "description": "A professional front-end template for building fast, robust, and adaptable web apps or sites.",
+  "version": "0.3.8",
+  "description": "Theo's portfolio site",
+  "keywords": [
+    "portfolio",
+    "portfolio-site",
+    "developer",
+    "developer-portfolio",
+    "cv"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/shierro/portfolio"
