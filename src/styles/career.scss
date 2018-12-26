@@ -1,4 +1,349 @@
+$rarebirds: #75ce66;
+$axa: #B8FAFF;
+$twist: #f0ca45;
+$nms: #ACFFE9;
+
 
 section#career {
   background-color: #20a8d8;
+  height: 100% !important;
+  min-height: 100vh;
+
+  .nms {
+    ol a {
+      background-color: $nms;
+    }
+  }
+
+  .rarebirds {
+    ol a {
+      background-color: $rarebirds;
+    }
+  }
+
+  .axa {
+    ol a {
+      background-color: $axa;
+    }
+  }
+
+  .twist {
+    ol a {
+      background-color: $twist;
+    }
+  }
+
+  // project list
+  ol {
+    text-align: left;
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+    font-size: 15px;
+    padding: 0;
+    margin-bottom: 4em;
+    margin: 0 0 0 2em;
+
+    a {
+      position: relative;
+      display: block;
+      padding: .4em .4em .4em 2em;
+      *padding: .4em;
+      margin: .5em 0;
+      // background: #75ce66;
+      color: #000;
+      text-decoration: none;
+      border-radius: .3em;
+      border-radius: 10em;
+      transition: all .2s ease-in-out;
+
+      &:hover {
+        background: #d6d4d4;
+        text-decoration:none;
+        transform: scale(1.1);
+      }
+      
+      &:before{
+        content: counter(li);
+        counter-increment: li;
+        position: absolute;
+        left: -1.3em;
+        top: 50%;
+        margin-top: -1.3em;
+        background:#93C775;
+        height: 2em;
+        width: 2em;
+        line-height: 2em;
+        border: .3em solid #fff;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 2em;
+        color:#FFF;
+      }
+    }
+  }
+
+  *, *::after, *::before {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  header {
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    background: #303e49;
+
+    h1 {
+      color: white;
+      font-size: 1.8rem;
+    }
+  }
+
+
+  .scroll {
+    color: $primary;
+    &:after, &:before {
+      color: $primary;
+    }
+  }
+
+  .cd-timeline {
+    overflow: hidden;
+    margin: 2em auto;
+    padding-bottom: 80px;
+
+    &__container {
+      height: 100%;
+      position: relative;
+      width: 90%;
+      // max-width: 1170px;
+      margin: 0 auto;
+      padding: 2em 0;
+
+      &::before {
+        /* this is the vertical line */
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 18px;
+        height: 100%;
+        width: 4px;
+        background: #d7e4ed;
+      }
+    }
+
+    &__block {
+      position: relative;
+      padding-bottom: 2em;
+      margin: 2em 0;
+      &:after {
+        /* clearfix */
+        content: "";
+        display: table;
+        clear: both;
+      }
+    
+      &:first-child {
+        margin-top: 0;
+      }
+    
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+
+      img {
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        margin-left: -12px;
+        margin-top: -12px;
+      }
+
+      &--rarebirds {
+        background: $rarebirds;
+      }
+    
+      &--axa {
+        background: $axa;
+      }
+    
+      &--twist {
+        background: $twist;
+      }
+
+      &--nms {
+        background: $nms;
+      }
+    }
+
+    &__project {
+      &--title {
+        margin: 0;
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 10px;
+      }
+    }
+
+    &__content {
+      position: relative;
+      margin-left: 60px;
+      background: white;
+      border-radius: 0.25em;
+      padding: 1em;
+      box-shadow: 0 3px 0 #d7e4ed;
+      // min-width: 370px;
+
+      &:after {
+        /* clearfix */
+        content: "";
+        display: table;
+        clear: both;
+      }
+    
+      &::before {
+        /* triangle next to content block */
+        content: '';
+        position: absolute;
+        top: 16px;
+        right: 100%;
+        height: 0;
+        width: 0;
+        border: 7px solid transparent;
+        border-right: 7px solid white;
+      }
+
+      &--job-title {
+        font-weight: 800;
+      }
+
+      &--company, &--job-title {
+        text-align: left;
+        margin: 0;
+      }
+
+      h2 {
+        color: #303e49;
+      }
+    
+      p {
+        margin: 1em 0;
+        line-height: 1.6;
+      }
+    }
+
+    &__date {
+      float: left;
+      padding: .8em 0;
+      opacity: .7;
+    }
+
+    &__content, &__date {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .cd-timeline {
+      &__content {
+        h2 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1.6rem;
+        }
+      }
+
+      &__date {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1170px) {
+    header {
+      height: 300px;
+      line-height: 300px;
+      
+      h1 {
+        font-size: 2.4rem;
+      }
+    }
+    .cd-is-hidden {
+      visibility: hidden;
+    }
+
+    .cd-timeline {
+      &__container {
+        min-width: 1170px;
+
+        &::before {
+          left: 50%;
+          margin-left: -2px;
+        }
+      }
+
+      &__img {
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        margin-left: -30px;
+        /* Force Hardware Acceleration */
+        transform: translateZ(0);
+
+        &--bounce-in {
+          visibility: visible;
+          // animation: cd-bounce-1 0.6s;
+        }
+      }
+
+      &__content {
+        margin-left: 0;
+        padding: 1.6em;
+        width: 45%;
+        /* Force Hardware Acceleration */
+        transform: translateZ(0);
+
+        &::before {
+          top: 24px;
+          left: 100%;
+          border-color: transparent;
+          border-left-color: white;
+        }
+      }
+
+      &__block {
+        margin: 4em 0;
+        &:nth-child(even) {
+          .cd-timeline {
+            &__content {
+              float: right;
+
+              &::before {
+                top: 24px;
+                left: auto;
+                right: 100%;
+                border-color: transparent;
+                border-right-color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -42,12 +42,16 @@
   <script src="js/vendor/scrollProgress-min.js"></script>
   <script src="js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127422115-5"></script>
   <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-127422115-3', 'auto'); ga('send', 'pageview')
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127422115-5');
   </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
 
   <!-- progress bar at the bottom -->
   <div class="progress-bar"></div>
@@ -92,10 +96,81 @@
       data-aos-id="career"
       data-section-name="career"
       class="section">
-      <div class="row section__title">Career!</div>
+      <h1 class="section__title">Theo's career!</h1>
+      <section class="row cd-timeline js-cd-timeline">
+          <div class="cd-timeline__container">
+            <div class="cd-timeline__block js-cd-block rarebirds" data-aos="fade-right">
+              <div class="cd-timeline__img cd-timeline__img--rarebirds js-cd-img">
+                <img src="img/goal-svgrepo-com.svg" alt="DM">
+              </div> <!-- cd-timeline__img -->
+      
+              <div class="cd-timeline__content js-cd-content">
+                <h3 class="cd-timeline__content--job-title">Full Stack Developer / DevOps</h2>
+                <h4 class="cd-timeline__content--company">RareBirds - Remote(AU, ID, PH)</h2>
+                <h5 class="cd-timeline__project--title">Projects</h5>
+                <ol>
+                  <li><a target="_blank" href="https://rarebirdslabs.com">rarebirdslabs.com (Digital Marketing)</a></li>
+                  <li><a target="_blank" href="https://tym.coach">tym.coach (Digital Marketing, Finance Coach App)</a></li>
+                  <li><a>EventBot (X-Platform Chat Bot)</a></li>
+                </ol>
+                <span class="cd-timeline__date">November 2017 - <i>Present</i> (1 year 1 months)</span>
+              </div> <!-- cd-timeline__content -->
+            </div> <!-- cd-timeline__block -->
+      
+            <div class="cd-timeline__block js-cd-block axa" data-aos="fade-left">
+              <div class="cd-timeline__img cd-timeline__img--axa js-cd-img">
+                <img src="img/insurance-svgrepo-com.svg" alt="Insurance">
+              </div> <!-- cd-timeline__img -->
+      
+              <div class="cd-timeline__content js-cd-content">
+                <h3 class="cd-timeline__content--job-title">Full Stack Developer</h2>
+                <h4 class="cd-timeline__content--company">AXA / VISEO - Makati City, PH</h2>
+                <h5 class="cd-timeline__project--title">Projects</h5>
+                <ol>
+                  <li><a href="https://travel.axa-insurance.co.id" target="_blank">AXA Indonesia travel funnel(E-commerce)</a></li>
+                  <li><a href="https://www.krungthai-axa.co.th/en/iprotect-s" target="_blank">AXA Thailand Iprotect-s Module(E-commerce)</a></li>
+                </ol>
+                <span class="cd-timeline__date">April 2017 - Nov 2018 (8 months)</span>
+              </div> <!-- cd-timeline__content -->
+            </div> <!-- cd-timeline__block -->
+      
+            <div class="cd-timeline__block js-cd-block twist" data-aos="fade-right">
+              <div class="cd-timeline__img cd-timeline__img--twist js-cd-img">
+                <img src="img/education-certificate-hand-drawn-document-svgrepo-com.svg" alt="Picture">
+              </div> <!-- cd-timeline__img -->
+      
+              <div class="cd-timeline__content js-cd-content">
+                <h3 class="cd-timeline__content--job-title">Software Engineer II</h2>
+                <h4 class="cd-timeline__content--company">TwistResources - Clark, Pampanga PH</h2>
+                <h5 class="cd-timeline__project--title">Projects</h5>
+                <ol>
+                  <li><a href="https://studylane.com/" target="_blank">Studylane (E-learning)</a></li>
+                </ol>
+                <span class="cd-timeline__date">September 2016 – April 2017 (8 mos)</span>
+              </div> <!-- cd-timeline__content -->
+            </div> <!-- cd-timeline__block -->
+      
+            <div class="cd-timeline__block js-cd-block nms" data-aos="fade-left">
+              <div class="cd-timeline__img cd-timeline__img--nms js-cd-img">
+                <img src="img/chat.svg" alt="Location">
+              </div> <!-- cd-timeline__img -->
+      
+              <div class="cd-timeline__content js-cd-content">
+                <h3 class="cd-timeline__content--job-title">Web Developer</h2>
+                <h4 class="cd-timeline__content--company">Rosking - Baguio City, PH</h2>
+                <h5 class="cd-timeline__project--title">Projects</h5>
+                <ol>
+                  <li><a>Chat platform</a></li>
+                </ol>
+                <span class="cd-timeline__date">Mar 2015 – Sep 2016 (1yr 7mos)</span>
+              </div> <!-- cd-timeline__content -->
+            </div> <!-- cd-timeline__block -->
+          </div>
+        </section> <!-- cd-timeline -->
       <div class="row scroll-next__container">
         <a href="#skills" class="scroll scroll-next">Find out more</a>
       </div>
+      <div class="career-bottom"></div>
     </section>
     <section
       id="skills"
@@ -122,7 +197,7 @@
       data-aos-id="contact"
       data-section-name="contact"
       class="section">
-      <div class="row section__title">Contact us! :)</div>
+      <div class="row section__title">Contact me! :)</div>
       <div class="ocean">
         <div class="bubbles">
           <span></span>

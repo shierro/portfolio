@@ -30,7 +30,7 @@
     "strip-json-comments": "^2.0.1"
   },
   "dependencies": {
-    "aos": "^2.3.4",
+    "aos": "^3.0.0-beta.6",
     "scrollprogress": "^3.0.2",
     "typeface-montserrat": "^0.0.54"
   },
@@ -57,7 +57,7 @@
     "build": "gulp build",
     "dev": "gulp build && gulp watch"
   },
-  "version": "0.3.8",
+  "version": "0.4.0",
   "description": "Theo's portfolio site",
   "keywords": [
     "portfolio",
