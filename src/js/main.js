@@ -49,6 +49,15 @@ $(document).ready(function() {
       if (e === 1) {
         $.scrollify.disable();
       }
+
+      // scroll go to skills section
+      if (e === 2) {
+        $('.progress-bar').addClass('is-in-skills');
+      }
+
+      if (e !== 2 && $('.progress-bar').hasClass('is-in-skills')) {
+        $('.progress-bar').removeClass('is-in-skills');
+      }
     },
   });
 
@@ -107,6 +116,7 @@ $(document).ready(function() {
       shortDisableScrolling(1500);
       $.scrollify.enable();
       $.scrollify.update();
+      $('.progress-bar').addClass('is-in-skills');
     }
     lastScrollTop = $(this).scrollTop();
   }

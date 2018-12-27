@@ -57,7 +57,7 @@
     "build": "gulp build",
     "dev": "gulp build && gulp watch"
   },
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Theo's portfolio site",
   "keywords": [
     "portfolio",
